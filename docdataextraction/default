@@ -32,7 +32,8 @@ server {
     listen 443 ssl default_server;
     listen [::]:443 ssl default_server;
 
-    
+    ssl_certificate /etc/ssl/certs/ssl-cert-snakeoil.pem;
+    ssl_certificate_key /etc/ssl/private/ssl-cert-snakeoil.key;
 
     # Note: You should disable gzip for SSL traffic.
     # See: https://bugs.debian.org/773332
@@ -51,7 +52,7 @@ server {
     index index.html index.htm index.nginx-debian.html;
 
     server_name silfraocr.eastus.cloudapp.azure.com;
-
+    
     location / {
         # First attempt to serve request as file, then
         # as directory, then fall back to displaying a 404.
