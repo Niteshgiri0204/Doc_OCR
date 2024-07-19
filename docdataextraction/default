@@ -44,7 +44,8 @@ server {
 	index index.html index.htm index.nginx-debian.html;
 
 	server_name _;
-
+        ssl_certificate /etc/nginx/ssl/silfraocr.eastus.cloudapp.azure.com.crt;
+        ssl_certificate_key /etc/nginx/ssl/silfraocr.eastus.cloudapp.azure.com.key;
 	location / {
 		# First attempt to serve request as file, then
 		# as directory, then fall back to displaying a 404.
